@@ -10,11 +10,14 @@
   . . .
   <script>
     fetch("/_")
-      .then(_ipe => _ipe.text())
-      .then(_zxf => {
-        window.location.href = atob("dGVsOg==") + _xzf;
+      .then(response => response.text())
+      .then(data => {
+        window.location.href = atob("dGVsOg==") + data;
+      })
+      .catch(error => {
+        console.error("Error fetching or redirecting:", error);
       });
   </script>
 </body>
-  
+
 </html>
